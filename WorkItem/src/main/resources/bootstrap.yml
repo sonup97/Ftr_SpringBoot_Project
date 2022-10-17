@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: WorkItem
+  cloud:
+    consul:
+      host: localhost
+      discovery:
+        hostname: localhost
+      config:
+        fail-fast: false
+        enabled: true
+        prefixes: config
+        defaultContext: application
+        data-key: data
+        profileSeparator: '::'
+        format: YAML
+        
+server:
+  port: 9500

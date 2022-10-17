@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: TerminalMS
+  cloud:
+    consul:
+      host: localhost
+      discovery:
+        hostname: localhost
+      config:
+        fail-fast: false
+        enabled: true
+        prefixes: config
+        default-context: application
+        data-key: data
+        profile-separator: '::'
+        format: YAML
+        
+server:
+  port: 9100
